@@ -1,0 +1,32 @@
+<div>
+    <img src="/Eat-That-Burger/public/assets/css/hamburger.png">
+</div>
+
+<h1>Eat-Da-Burger!</h1>
+
+<div>
+  {{#each burgers}}
+    {{#unless devoured}}
+      {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+  {{/each}}
+</div>
+
+
+<div>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+</div>
+
+<form>
+    <div>Type the name of your Burger and click on submit</div>
+    <div class="input-group">
+     <div class="col">
+      <input type="text" class="form-control" placeholder="Burger name">
+    </div>
+    </div>
+  <button type="button" class="btn btn-primary">Submit</button>
+</form>
