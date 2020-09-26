@@ -1,0 +1,33 @@
+#body {
+    background-color: yellow;
+}
+
+.card {
+    
+}
+
+#inputDiv {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.btn-primary {
+    padding: 15px;
+    margin: auto;
+    margin-left: 40%;
+}
+
+
+.input-group {
+    padding-bottom: 20px;
+}
+
+#h1 {
+    text-align: center;
+    color: tomato;
+    font-size: 100px;
+}
+
+p {
+    text-align: center;
+}

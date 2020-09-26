@@ -1,32 +1,53 @@
-<div>
-    <img src="/Eat-That-Burger/public/assets/css/hamburger.png">
+ <header><h1 id="h1">Eat-Da-Burger!</h1></header>
+		 <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card" >
+                        <div class="card-header">
+                          To eat!
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            {{#each burgers}}
+                                {{#if devoured}}
+                                    {{> burgers/burger-block devoured=false}}
+                                {{/if}}
+                            {{/each}}
+                        </ul>
+                      </div>
+                </div> 
+                <div id="inputDiv" class="col-md-4">
+                    <div class="card">
+                        <img src="./assets/css/burger1.png" class="card-img-top" width="60%" alt="funny burger">
+                            <div class="card-body">
+                                <form class="">
+                                    <p>Type the name of your Burger and click on submit</p>
+                                        <div class="input-group">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Example: Double Cheese Burger" style="width: 18rem;">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button type="button" class="btn btn-primary">Submit</button>
+                                        </div>
+                                </form>
+                            </div>
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                <div class="card" >
+                    <div class="card-header">
+                      Devoured!
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        {{#each burgers}}
+                            {{#if devoured}}
+                                {{> burgers/burger-block devoured=false}}
+                            {{/if}}
+                        {{/each}}
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+
 </div>
-
-<h1>Eat-Da-Burger!</h1>
-
-<div>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</div>
-
-
-<div>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</div>
-
-<form>
-    <div>Type the name of your Burger and click on submit</div>
-    <div class="input-group">
-     <div class="col">
-      <input type="text" class="form-control" placeholder="Burger name">
-    </div>
-    </div>
-  <button type="button" class="btn btn-primary">Submit</button>
-</form>
