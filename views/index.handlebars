@@ -4,14 +4,14 @@
                 <div class="col-md-4">
                     <div class="card" >
                         <div class="card-header">
-                          To eat!
+                          <h5>Your Burgers!</h5>
                         </div>
                         <ul class="list-group list-group-flush">
-                            {{#each burgers}}
-                                {{#if devoured}}
-                                    {{> burgers/burger-block devoured=false}}
-                                {{/if}}
-                            {{/each}}
+                          {{#each burgers}}
+                            {{#unless devoured}}
+                              <li class="list-group-item">{{> burgers/burger-block devoured=true}}</li>
+                            {{/unless}}
+                          {{/each}}
                         </ul>
                       </div>
                 </div> 
@@ -19,11 +19,11 @@
                     <div class="card">
                         <img src="./assets/css/burger1.png" class="card-img-top" width="60%" alt="funny burger">
                             <div class="card-body">
-                                <form class="">
+                                <form class="create-form">
                                     <p>Type the name of your Burger and click on submit</p>
                                         <div class="input-group">
                                             <div class="col">
-                                                <input type="text" class="form-control" placeholder="Example: Double Cheese Burger" style="width: 18rem;">
+                                                <input type="text" id="Burg" class="form-control" placeholder="Example: Double Cheese Burger" style="width: 18rem;">
                                             </div>
                                         </div>
                                         <div>
@@ -36,12 +36,12 @@
                 <div class="col-md-4">
                 <div class="card" >
                     <div class="card-header">
-                      Devoured!
+                      <h5>Devoured Burgers!</h5>
                     </div>
                     <ul class="list-group list-group-flush">
                         {{#each burgers}}
                             {{#if devoured}}
-                                {{> burgers/burger-block devoured=false}}
+                                <li class="list-group-item">{{> burgers/burger-block devoured=false}}</li>
                             {{/if}}
                         {{/each}}
                     </ul>
