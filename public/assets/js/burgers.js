@@ -30,7 +30,6 @@ $(function() {
       } else {
       var newBurger = {
         burger_name: $("#Burg").val().trim(),
-        }
       };
       // Send the POST request.
       $.ajax("/api/burgers", {
@@ -42,9 +41,9 @@ $(function() {
           // Reload the page to get the updated list
           location.reload();
         }
-      );
+      )};
     });
-  
+    
     $(".delete-burger").on("click", function(event) {
       var id = $(this).data("id");
   
