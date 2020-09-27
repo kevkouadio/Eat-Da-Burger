@@ -1,8 +1,10 @@
-# Good README Generator
+# Eat-Da-Burger App  
 ![](https://img.shields.io/badge/license-MIT-blue)
+
 ## Description
 It is a burger logger application that follow the MVC design pattern. It uses Node and MySQL to query and route data and Handlebars to generate the HTML.
 
+[Link to deployed App](kk-eat-da-burger.herokuapp.com/)
 ## Table of contents
 * [Description](#Description)
 * [Installation](#Installation)
