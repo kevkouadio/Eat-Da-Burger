@@ -24,11 +24,14 @@ $(function() {
     $(".create-form").on("submit", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
-  
+      //validator to prevent generating empty input  
+      if ($("#Burg").val().trim()==="" || $("#Burg").val().trim()===" " || $("#Burg").val().trim()== null) {
+        alert("Please Enter a valid Burger's name!")  
+      } else {
       var newBurger = {
         burger_name: $("#Burg").val().trim(),
+        }
       };
-  
       // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
