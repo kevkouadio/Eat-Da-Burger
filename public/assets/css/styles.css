@@ -1,9 +1,7 @@
 #body {
     background-color: yellow;
-}
-
-.card {
-    
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 #inputDiv {
@@ -28,6 +26,19 @@
     font-size: 100px;
 }
 
+h5 {
+    text-align: center;
+}
+
 p {
     text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    
+    #body {
+        margin-left: 2%;
+        margin-right: 0%;
+    }
+
 }
