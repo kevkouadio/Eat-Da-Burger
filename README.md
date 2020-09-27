@@ -4,7 +4,7 @@
 ## Description
 It is a burger logger application that follow the MVC design pattern. It uses Node and MySQL to query and route data and Handlebars to generate the HTML.
 
-[Link to deployed App](kk-eat-da-burger.herokuapp.com/)
+[Link to deployed App](https://kk-eat-da-burger.herokuapp.com)
 ## Table of contents
 * [Description](#Description)
 * [Installation](#Installation)
